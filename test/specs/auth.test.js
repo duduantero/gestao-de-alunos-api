@@ -1,7 +1,7 @@
 import request from 'supertest';
 import { expect } from 'chai';
 import mongoose from 'mongoose';
-import app from '../src/app.js';
+import app from '../../src/app.js';
 
 describe('POST /api/auth/login', () => {
   after(async () => {
@@ -15,6 +15,7 @@ describe('POST /api/auth/login', () => {
 
     expect(resposta.status).to.equal(200);
     expect(resposta.body).to.have.property('token');
+    expect(resposta.body.token).to.be.a('string');
   });
 
   it('deve retornar 401 quando a senha informada for inválida', async () => {
