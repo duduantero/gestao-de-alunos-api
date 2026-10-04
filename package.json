@@ -8,7 +8,7 @@
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "test": "mocha test/**/*.test.js --exit",
-    "test:entrega":"mocha entregasTrabalho.test.js --exit"
+    "test:entrega":"mocha test/specs/entregasTrabalho.test.js --exit"
   },
   "author": "",
   "license": "ISC",
